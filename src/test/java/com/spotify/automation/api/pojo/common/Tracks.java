@@ -1,16 +1,15 @@
-package com.spotify.automation.api.pojo.playlists.createplaylists;
+package com.spotify.automation.api.pojo.common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.Builder;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.*;
+import lombok.*;
 
 import java.util.List;
 
-/**
- * POJO for tracks in the playlist.
- */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Tracks {
 
     @JsonProperty("href")

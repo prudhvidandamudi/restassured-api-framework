@@ -1,14 +1,16 @@
-package com.spotify.automation.api.pojo.playlists.createplaylists;
+package com.spotify.automation.api.pojo.common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-/**
- * POJO for individual track items in a playlist.
- */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TrackItem {
 
     @JsonProperty("added_at")

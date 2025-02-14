@@ -1,21 +1,22 @@
-package com.spotify.automation.api.pojo.playlists.createplaylists;
+package com.spotify.automation.api.pojo.playlists;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.spotify.automation.api.pojo.common.ExternalUrls;
-import com.spotify.automation.api.pojo.common.Followers;
-import com.spotify.automation.api.pojo.common.Image;
+import com.spotify.automation.api.pojo.common.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
-/**
- * POJO for Create Playlist API Response.
- */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CreatePlaylistResponse {
 
     @JsonProperty("collaborative")

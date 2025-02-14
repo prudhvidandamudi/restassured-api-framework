@@ -1,14 +1,19 @@
-package com.spotify.automation.api.pojo.playlists.createplaylists;
+package com.spotify.automation.api.pojo.common;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.spotify.automation.api.pojo.common.ExternalUrls;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Track {
 
     @JsonProperty("album")

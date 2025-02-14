@@ -1,12 +1,13 @@
-package com.spotify.automation.api.pojo.playlists.createplaylists;
+package com.spotify.automation.api.pojo.common;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.spotify.automation.api.pojo.common.ExternalUrls;
-import lombok.Builder;
-import lombok.Data;
+import com.fasterxml.jackson.annotation.*;
+import lombok.*;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Artist {
 
     @JsonProperty("external_urls")
